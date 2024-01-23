@@ -1,5 +1,6 @@
 ---
 import Button from '../Button.astro';
+const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <nav
@@ -31,8 +32,17 @@ import Button from '../Button.astro';
 
   <div id="mymenu" class="navbar-menu">
     <div class="navbar-end">
-      <a href="/" class="navbar-item">Home</a>
-      <a class="navbar-item">About</a>
+      <a
+        href="/"
+        class={currentPath === '/' ? 'navbar-item is-active' : 'navbar-item'}
+        >Home</a
+      >
+      <a
+        href="/about"
+        class={currentPath.startsWith('/about')
+          ? 'navbar-item is-active'
+          : 'navbar-item'}>About</a
+      >
       <a class="navbar-item">Work</a>
       <div class="navbar-item my-nav-button">
         <Button>Contact</Button>
