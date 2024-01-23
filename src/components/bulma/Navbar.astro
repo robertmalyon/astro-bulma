@@ -1,0 +1,96 @@
+---
+
+---
+
+<nav
+  id="mynav"
+  class="navbar is-fixed-top transparent-bg"
+  role="navigation"
+  aria-label="main navigation"
+>
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img
+        src="https://bulma.io/images/bulma-logo.png"
+        width="112"
+        height="28"
+      />
+    </a>
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="mymenu"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="mymenu" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item">Home</a>
+      <a class="navbar-item">About</a>
+      <a class="navbar-item">Work</a>
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Contact</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    transition: background-color 0.5s ease;
+  }
+  .transparent-bg {
+    background-color: transparent !important;
+  }
+  .navbar-burger {
+    font-size: 2rem;
+  }
+</style>
+
+<script>
+  function setUpNav() {
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll('.navbar-burger'),
+        0
+      );
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach((el) => {
+        el.addEventListener('click', () => {
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  }
+
+  setUpNav();
+  document.addEventListener('astro:after-swap', () => setUpNav());
+
+  // Scroll effects
+  const navbar = document.querySelector('.navbar');
+  window.onscroll = () => {
+    if (window.scrollY > 150) {
+      navbar.classList.remove('transparent-bg');
+    } else {
+      navbar.classList.add('transparent-bg');
+    }
+  };
+</script>
