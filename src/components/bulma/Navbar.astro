@@ -81,16 +81,16 @@ import { navLinks } from '../../NavStructure.js';
       const target = document.getElementById('mymenu');
       target.classList.toggle('is-active');
     });
-  }
 
-  const navbar = document.querySelector('.navbar');
-  window.onscroll = () => {
-    if (window.scrollY > 150) {
-      navbar.classList.remove('transparent-bg');
-    } else {
-      navbar.classList.add('transparent-bg');
-    }
-  };
+    const navbar = document.querySelector('.navbar');
+    window.onscroll = () => {
+      if (window.scrollY > 150) {
+        navbar.classList.remove('transparent-bg');
+      } else {
+        navbar.classList.add('transparent-bg');
+      }
+    };
+  }
 
   setUpNav();
   document.addEventListener('astro:after-swap', () => setUpNav());
