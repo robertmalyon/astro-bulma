@@ -1,6 +1,7 @@
 ---
 import Button from '../Button.astro';
 const currentPath = new URL(Astro.request.url).pathname;
+import { navLinks } from '../../NavStructure.js';
 ---
 
 <nav
@@ -37,13 +38,20 @@ const currentPath = new URL(Astro.request.url).pathname;
         class={currentPath === '/' ? 'navbar-item is-active' : 'navbar-item'}
         >Home</a
       >
-      <a
-        href="/about"
-        class={currentPath.startsWith('/about')
-          ? 'navbar-item is-active'
-          : 'navbar-item'}>About</a
-      >
-      <a class="navbar-item">Work</a>
+      {
+        navLinks.map((navLink) => (
+          <a
+            href={navLink.href}
+            class={
+              currentPath.startsWith(navLink.href)
+                ? 'navbar-item is-active'
+                : 'navbar-item'
+            }
+          >
+            {navLink.text}
+          </a>
+        ))
+      }
       <div class="navbar-item my-nav-button">
         <Button>Contact</Button>
       </div>
