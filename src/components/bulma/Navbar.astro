@@ -3,6 +3,7 @@ import Button from '../Button.astro';
 ---
 
 <nav
+  transition:persist
   id="mynav"
   class="navbar is-fixed-top transparent-bg"
   role="navigation"
@@ -57,33 +58,27 @@ import Button from '../Button.astro';
 </style>
 
 <script>
-  function setUpNav() {
-    document.addEventListener('DOMContentLoaded', () => {
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(
-        document.querySelectorAll('.navbar-burger'),
-        0
-      );
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll('.navbar-burger'),
+      0
+    );
 
-      // Add a click event on each of them
-      $navbarBurgers.forEach((el) => {
-        el.addEventListener('click', () => {
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
+    // Add a click event on each of them
+    $navbarBurgers.forEach((el) => {
+      el.addEventListener('click', () => {
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
 
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-        });
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
       });
     });
-  }
+  });
 
-  setUpNav();
-  document.addEventListener('astro:after-swap', () => setUpNav());
-
-  // Scroll effects
   const navbar = document.querySelector('.navbar');
   window.onscroll = () => {
     if (window.scrollY > 150) {
