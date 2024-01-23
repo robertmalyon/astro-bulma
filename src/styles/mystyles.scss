@@ -69,6 +69,8 @@ $input-shadow: none;
 
 // Breadcrumbs
 $breadcrumb-item-separator-color: black;
+$breadcrumb-item-color: hsl(229, 53%,  53%);
+$breadcrumb-item-separator-color:hsl(0, 0%, 71%);
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
