@@ -1,0 +1,45 @@
+---
+const currentPath = Astro.url.pathname;
+
+function generateBreadcrumbs(fullUrl) {
+  // Remove leading and trailing slashes, if any
+  fullUrl = fullUrl.replace(/^\/|\/$/g, '');
+
+  // Split the URL into segments
+  const urlSegments = fullUrl.split('/');
+
+  // Initialize breadcrumbs with the Home link
+  const breadcrumbs = [
+    {
+      title: 'Home',
+      slug: '/',
+    },
+  ];
+
+  // Iterate through the URL segments to construct breadcrumbs
+  let currentSlug = '/';
+  for (const segment of urlSegments) {
+    currentSlug += `${segment}/`;
+    breadcrumbs.push({
+      title: segment.replace(/(^|-)\w/g, (s) => s.toUpperCase()), // Capitalize the first letter and any letter after a dash
+      slug: currentSlug,
+    });
+  }
+
+  return breadcrumbs;
+}
+
+const breadcrumbs = generateBreadcrumbs(currentPath);
+---
+
+<nav class="breadcrumb is-medium" aria-label="breadcrumbs">
+  <ul>
+    {
+      breadcrumbs.map(({ title, slug }, index) => (
+        <li class={index === breadcrumbs.length - 1 ? 'is-active' : ''}>
+          <a href={slug}>{title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

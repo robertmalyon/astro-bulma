@@ -1,6 +1,6 @@
-@charset "utf-8";
 
 :root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     --primary: #fe3e3f;
     --primaryLight: #FF677C;
     --secondary: #E6F0FF;
@@ -41,47 +41,3 @@
     21.7px 43.5px 51px -2.6px hsl(var(--shadow-color) / 0.39),
     32.5px 65px 76.3px -3px hsl(var(--shadow-color) / 0.37);
 }
-
-// Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-
-// Set your brand colors
-
-$green: #01501f;
-$grey: #dfe7e7;
-$brown: #5a553c;
-$accent: var(--primary);
-
-// Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
-$grey-dark: $brown;
-$grey-light: $grey;
-$primary: $green;
-$link: $green;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
-
-// Update some of Bulma's component variables
-$body-background-color: $grey;
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
-
-// Breadcrumbs
-$breadcrumb-item-separator-color: black;
-
-// Import only what you need from Bulma
-@import "../node_modules/bulma/sass/utilities/_all.sass";
-@import "../node_modules/bulma/sass/base/_all.sass";
-@import "../node_modules/bulma/sass/elements/button.sass";
-@import "../node_modules/bulma/sass/elements/container.sass";
-@import "../node_modules/bulma/sass/elements/title.sass";
-@import "../node_modules/bulma/sass/form/_all.sass";
-@import "../node_modules/bulma/sass/components/navbar.sass";
-@import "../node_modules/bulma/sass/layout/hero.sass";
-@import "../node_modules/bulma/sass/layout/section.sass";
-@import "../node_modules/bulma/sass/components/breadcrumb.sass";
-
-
-// Import navbar transition
-@import "../styles/navbar-transition.scss";

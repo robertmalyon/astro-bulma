@@ -1,5 +1,7 @@
 ---
 import '../styles/mystyles.scss';
+import '../styles/reset.css';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -11,6 +13,7 @@ import '../styles/mystyles.scss';
     <title>Document</title>
   </head>
   <body>
+    <ViewTransitions />
     <slot />
   </body>
 </html>
