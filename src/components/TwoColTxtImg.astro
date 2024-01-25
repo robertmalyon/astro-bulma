@@ -1,8 +1,13 @@
 ---
+const { firstItem = 'text' } = Astro.props;
+let flexStyle = 'flex-direction: row';
 
+if (firstItem === 'image') {
+  flexStyle = 'flex-direction: row-reverse';
+}
 ---
 
-<div class="component">
+<div class="component" style={flexStyle}>
   <div class="content">
     <div class="content-top">
       <div class="margin-bottom-xxsmall">
@@ -58,7 +63,7 @@
     grid-auto-columns: 1fr;
     align-items: stretch;
     display: grid;*/
-    flex-direction: row;
+
     justify-content: space-between;
     align-items: stretch;
     display: flex;
