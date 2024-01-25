@@ -1,0 +1,140 @@
+<header>
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-large">
+        <div class="w-layout-grid this_component">
+          <div class="content">
+            <div class="margin-bottom-small">
+              <h1>Medium length hero heading goes here</h1>
+            </div>
+            <p class="text-size-medium">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat.
+            </p>
+            <div class="margin-top-medium">
+              <div class="button-group">
+                <a href="#" class="button">Button</a>
+                <a href="#" class="button is-secondary">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img
+              src="https://source.unsplash.com/random"
+              loading="eager"
+              alt=""
+              class="header_image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .padding-global {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .container-large {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .padding-section-large {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .w-layout-grid {
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+  }
+
+  .this_component {
+    grid-column-gap: 5rem;
+    grid-row-gap: 4rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    display: grid;
+  }
+
+  .matgin-bottom-small {
+    margin-bottom: 1.5rem;
+  }
+
+  .text-size-medium {
+    font-size: 1.125rem;
+  }
+
+  .margin-top-medium {
+    margin: 2rem;
+  }
+
+  .button-group {
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+  }
+
+  .header_image {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 991px) {
+    .padding-section-large {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    .this_component {
+      min-height: auto;
+      grid-column-gap: 4rem;
+      grid-row-gap: 4rem;
+      grid-template-columns: 1fr;
+      grid-auto-flow: row;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .padding-section-large {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .this_component {
+      grid-column-gap: 3rem;
+      grid-row-gap: 3rem;
+    }
+
+    .margin-bottom-small {
+      margin-bottom: 1.25rem;
+    }
+
+    .text-size-medium {
+      font-size: 1rem;
+    }
+
+    .margin-top-medium {
+      margin: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+  }
+</style>

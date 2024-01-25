@@ -1,0 +1,176 @@
+---
+
+---
+
+<header>
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-large">
+        <div class="w-layout-grid portfolio-component">
+          <div class="content-left">
+            <div class="margin-bottom-small">
+              <h1>Project name here</h1>
+            </div>
+            <div class="text-size-medium">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
+            </div>
+            <div class="tag-list">
+              <a href="#" class="tag-item">
+                <div>Tag one</div>
+              </a>
+              <a href="#" class="tag-item">
+                <div>Tag two</div>
+              </a>
+              <a href="#" class="tag-item">
+                <div>Tag three</div>
+              </a>
+            </div>
+          </div>
+          <div class="w-layout-grid metatag-list">
+            <div class="metatag-item">
+              <div class="margin-bottom-xxs">
+                <h6>Client</h6>
+              </div>
+              <div>Full name</div>
+            </div>
+            <div class="metatag-item">
+              <div class="margin-bottom-xxs">
+                <h6>Date</h6>
+              </div>
+              <div>March 2023</div>
+            </div>
+            <div class="metatag-item">
+              <div class="margin-bottom-xxs">
+                <h6>Role</h6>
+              </div>
+              <div>Role name</div>
+            </div>
+            <div class="metatag-item">
+              <div class="margin-bottom-xxs">
+                <h6>Website</h6>
+              </div>
+              <a href="#" class="text-style-link">www.relume.io</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .padding-global {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .container-large {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .padding-section-large {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .w-layout-grid {
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+    grid-area: span 1 / span 1 / span 1 / span 1;
+  }
+
+  .portfolio-component {
+    grid-column-gap: 5rem;
+    grid-row-gap: 5rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1.5fr 1fr;
+    grid-auto-columns: 1fr;
+    align-items: start;
+    display: grid;
+  }
+
+  .content-left {
+    grid-area: span 1 / span 1 / span 1 / span 1;
+  }
+
+  .margin-bottom-small {
+    margin-bottom: 1.5rem;
+  }
+
+  .text-size-medium {
+    font-size: 1.125rem;
+  }
+
+  .tag-list {
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    flex-flow: wrap;
+    margin-top: 1.5rem;
+    display: flex;
+  }
+
+  .tag-item {
+    background-color: var(--base-color-neutral--neutral-lightest);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .metatag-list {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+  }
+
+  .margin-bottom-xxs {
+    margin-bottom: 0.5rem;
+  }
+
+  .text-style-link {
+    color: var(--link-primary);
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 991px) {
+    .padding-section-large {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    .portfolio-component {
+      grid-column-gap: 3rem;
+      grid-row-gap: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .padding-section-large {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .margin-bottom-small {
+      margin-bottom: 1.25rem;
+    }
+
+    .text-size-medium {
+      font-size: 1rem;
+    }
+
+    .portfolio-component {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

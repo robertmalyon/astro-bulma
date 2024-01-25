@@ -1,0 +1,189 @@
+---
+
+---
+
+<footer>
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-vertical-xxlarge">
+        <div class="padding-bottom-xxlarge">
+          <div class="footer-top-wrapper">
+            <a href="#" class="footer-logo-link"
+              ><img src="images/company-logo.svg" loading="lazy" alt="" /></a
+            >
+            <div class="w-layout-grid footer-link-list">
+              <a href="#" class="footer-link">Link One</a>
+              <a href="#" class="footer-link">Link Two</a>
+              <a href="#" class="footer-link">Link Three</a>
+              <a href="#" class="footer-link">Link Four</a>
+              <a href="#" class="footer-link">Link Five</a>
+            </div>
+          </div>
+        </div>
+        <div class="line-divider"></div>
+        <div class="padding-top-medium">
+          <div class="footer-bottom-wrapper">
+            <div class="footer-credit-text">
+              © 2023 Relume. All rights reserved.
+            </div>
+            <div class="w-layout-grid footer-legal-list">
+              <a href="#" class="footer-legal-link">Privacy Policy</a>
+              <a href="#" class="footer-legal-link">Terms of Service</a>
+              <a href="#" class="footer-legal-link">Cookies Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .padding-global {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .container-large {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .padding-vertical-xxlarge {
+    padding: 5rem 0;
+  }
+
+  .padding-bottom-xxlarge {
+    padding-bottom: 5rem;
+  }
+
+  .footer-top-wrapper {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+
+  .footer-logo-link {
+    margin-bottom: 2rem;
+    padding-left: 0;
+    justify-self: center;
+  }
+
+  .w-layout-grid {
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+  }
+
+  .footer-link-list {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 0px;
+    white-space: normal;
+    grid-template-rows: auto;
+    grid-template-columns: max-content;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    justify-content: center;
+    justify-items: start;
+    display: grid;
+  }
+
+  .footer-link {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .line-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--base-color-neutral--black);
+  }
+
+  .padding-top-medium {
+    padding-top: 2rem;
+  }
+
+  .footer-bottom-wrapper {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .footer-credit-text {
+    font-size: 0.875rem;
+  }
+
+  .footer-legal-list {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 0rem;
+    white-space: normal;
+    grid-template-rows: auto;
+    grid-template-columns: max-content;
+    grid-auto-columns: max-content;
+    grid-auto-flow: column;
+    justify-content: center;
+    display: grid;
+  }
+
+  .footer-legal-link {
+    font-size: 0.875rem;
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 991px) {
+    .padding-vertical-xxlarge {
+      padding: 4.5rem 0;
+    }
+
+    .padding-bottom-xxlarge {
+      padding-bottom: 4.5rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .padding-vertical-xxlarge {
+      padding: 3rem 0;
+    }
+
+    .padding-bottom-xxlarge {
+      padding-bottom: 3rem;
+    }
+
+    .footer-link-list {
+      grid-column-gap: 0px;
+      grid-row-gap: 1.5rem;
+      grid-auto-flow: row;
+      justify-items: center;
+    }
+
+    .padding-top-medium {
+      padding-top: 1.5rem;
+    }
+
+    .footer-bottom-wrapper {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-bottom: 1rem;
+    }
+
+    .footer-credit-text {
+      margin-top: 2rem;
+    }
+
+    .footer-legal-list {
+      grid-column-gap: 0rem;
+      grid-row-gap: 1rem;
+      grid-auto-flow: row;
+      justify-items: center;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+  }
+</style>

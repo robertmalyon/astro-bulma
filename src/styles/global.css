@@ -8,6 +8,7 @@
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
+    --linkPrimary: #1a1a1a;
     --pageHeaderBG: #606060;
     --bgSectionHazyBlue: #EEEEEE;
     --offWhiteText: #EEEEEE;
@@ -40,4 +41,8 @@
     14px 28px 32.9px -2.1px hsl(var(--shadow-color) / 0.42),
     21.7px 43.5px 51px -2.6px hsl(var(--shadow-color) / 0.39),
     32.5px 65px 76.3px -3px hsl(var(--shadow-color) / 0.37);
+}
+
+.hidden {
+  display: none;
 }

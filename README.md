@@ -1,6 +1,10 @@
 # Astro template for working with Bulma
 
-I've created a basic template which has Bulma installed and working. I've added an overall scss stylesheet to modify Bulma's variables. I've also created a navbar component which incorporates some additional functionalities including:
+## Purpose of the project
 
-- Transparent background which becomes opaque on scroll
-- Easing transition on open mobile menu achieved with JS
+I've set out to create a starter template for a web development projects using the Astro JS web framework and Bulma CSS framework installed and ready to use.
+
+## Interesting features
+
+- I've created a Bulma Nav but incorporated a nice fade-in easing transition for the menu that appears when the hamburger icon is pressed on smaller screens.
+- I've created a NavStructure.JS file containing an array of objects, title:href

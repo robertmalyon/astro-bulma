@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root {
-    --primary: #fe3e3f;
+    --primary: #F4B46A;
     --primaryLight: #FF677C;
     --secondary: #E6F0FF;
     --secondaryLight: #ffba43;
@@ -86,6 +86,8 @@ $breadcrumb-item-separator-color:hsl(0, 0%, 71%);
 @import "../node_modules/bulma/sass/layout/footer.sass";
 @import "../node_modules/bulma/sass/elements/content.sass";
 @import "../node_modules/bulma/sass/helpers/typography.sass";
+@import "../node_modules/bulma/sass/components/card.sass";
+@import "../node_modules/bulma/sass/grid/columns";
 
 
 // Import navbar transition
