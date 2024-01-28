@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+import mainLogo from '../assets/Stacked_200px_width_png.png';
+import mainImage from '../assets/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg';
+---
+
+<section class="image-context-section">
+  <div class="">
+    <div class="my-container columns is-desktop">
+      <div class="column left-column">
+        <Image src={mainLogo} alt="Astro Logo" />
+      </div>
+      <div class="column right-column">
+        <h1 class="leading title is-4 is-uppercase">Tagline</h1>
+        <h2 class="title is-1">Lorem ipsum dolor sit amet.</h2>
+        <h3 class="subtitle is-2">
+          Lorem ipsum dolor sit amet, consectetur adipisicing.
+        </h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
+          molestiae aliquid itaque illo, atque repellat eum quidem deserunt et
+          sapiente!
+        </p>
+        <a href="#" class="button is-medium is-outlined is-primary is-rounded"
+          >Find out more</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .image-context-section {
+    background-color: #bceb7e;
+  }
+
+  .my-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .left-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg);
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 3rem 3rem;
+    max-width: 700px;
+  }
+
+  .right-column p {
+    margin-bottom: 1rem;
+  }
+
+  .leading {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #000;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 991px) {
+  }
+
+  @media screen and (max-width: 767px) {
+  }
+
+  @media screen and (max-width: 479px) {
+  }
+</style>

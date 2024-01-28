@@ -4,7 +4,7 @@ import mainLogo from '../assets/Stacked_200px_width_png.png';
 ---
 
 <section class="section">
-  <div class="columns service-section">
+  <div class="columns is-desktop service-section">
     <div class="column left-column">
       <h1 class="title is-1">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum,
@@ -16,7 +16,9 @@ import mainLogo from '../assets/Stacked_200px_width_png.png';
         quibusdam illo libero quisquam corrupti sapiente unde inventore expedita
         consectetur quis sint?
       </p>
-      <a href="#" class="button is-medium is-rounded is-primary is-outlined"
+      <a
+        href="#"
+        class="cta-button-left button is-medium is-rounded is-primary is-outlined"
         >Find out more</a
       >
     </div>
@@ -33,6 +35,11 @@ import mainLogo from '../assets/Stacked_200px_width_png.png';
         <div class="number">02</div>
       </div>
       <!-- Service end -->
+      <a
+        href="#"
+        class="cta-button-right button is-medium is-rounded is-primary is-outlined"
+        >Find out more</a
+      >
     </div>
   </div>
 </section>
@@ -58,6 +65,11 @@ import mainLogo from '../assets/Stacked_200px_width_png.png';
     padding-top: 2rem;
   }
 
+  .cta-button-right {
+    align-self: flex-start;
+    display: none;
+  }
+
   .service-container {
     display: flex;
     flex-direction: row;
@@ -67,6 +79,14 @@ import mainLogo from '../assets/Stacked_200px_width_png.png';
     border-bottom: solid 1px black;
   }
   @media screen and (max-width: 991px) {
+    .cta-button-right {
+      display: block;
+      margin-top: 2rem;
+    }
+
+    .cta-button-left {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 767px) {
