@@ -1,5 +1,10 @@
 
 :root {
+    /* Breakpoints */
+    --breakpoint-small: 479px;
+    --breakpoint-medium: 767px;
+    --breakpoint-large: 991px;
+
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     --primary: #fe3e3f;
     --primaryLight: #FF677C;

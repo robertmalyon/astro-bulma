@@ -1,32 +1,29 @@
 ---
-
+import { Image } from 'astro:assets';
+import heroImage from '../assets/Woodland-Drive-Complete-1.jpeg';
 ---
 
 <header>
   <div class="w-layout-grid component">
     <div id="main-content" class="header-content">
       <div class="margin-bottom-small">
-        <h1>Medium length hero heading goes here</h1>
+        <h1 class="title is-1 has-text-info">Parry Dean Building Services</h1>
       </div>
       <p class="text-size-medium">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        Experienced builders Tim Parry and Roland Dean offer a range of building
+        services in Brighton & Hove and the surrounding areas.
       </p>
       <div class="margin-top-medium">
         <div class="button-group">
-          <a href="#" class="button w-button">Button</a>
-          <a href="#" class="button is-secondary w-button">Button</a>
+          <a href="#" class="button is-medium is-info">Our work</a>
+          <a href="#" class="button is-medium is-info is-outlined"
+            >Get in touch</a
+          >
         </div>
       </div>
     </div>
     <div class="header-image-wrapper">
-      <img
-        src="https://source.unsplash.com/random"
-        loading="eager"
-        alt=""
-        class="header-image"
-      />
+      <Image src={heroImage} alt="" class="header-image" />
     </div>
   </div>
 </header>
@@ -48,6 +45,7 @@
     grid-auto-columns: 1fr;
     align-items: center;
     display: grid;
+    min-height: 100vh;
   }
 
   #main-content {

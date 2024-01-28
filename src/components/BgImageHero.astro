@@ -1,5 +1,6 @@
 ---
-
+import { Image } from 'astro:assets';
+import heroImage from '../assets/Woodland-Drive-Complete-1.jpeg';
 ---
 
 <header>
@@ -33,12 +34,8 @@
     </div>
   </div>
   <div class="bg-img-wrapper">
-    <div class="image-overlay-layer"></div><img
-      src="https://source.unsplash.com/random"
-      loading="eager"
-      alt=""
-      class="header-bg-img"
-    />
+    <div class="image-overlay-layer"></div>
+    <Image src={heroImage} alt="" class="header-bg-img" />
   </div>
 </header>
 
@@ -78,7 +75,7 @@
   }
 
   .margin-top-medium {
-    margin: 2rem;
+    margin-top: 2rem;
   }
 
   .button-group {
@@ -146,7 +143,7 @@
     }
 
     .margin-top-medium {
-      margin: 1.5rem;
+      margin-top: 1.5rem;
     }
 
     .text-size-medium {

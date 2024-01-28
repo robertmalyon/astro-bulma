@@ -1,0 +1,128 @@
+---
+import { Image } from 'astro:assets';
+import caseStudy1 from '../assets/Woodland-Drive-Complete-1.jpeg';
+---
+
+<section class="section">
+  <div class="case-studies-container">
+    <div class="casestudy">
+      <div class="case-study-img">
+        <a href=""><Image src={caseStudy1} alt="Company logo" /></a>
+      </div>
+      <div class="tags-container">
+        <span
+          class="tag is-medium is-rounded is-primary is-light has-text-black"
+        >
+          Tag label</span
+        >
+      </div>
+      <a href=""
+        ><h1 class="title is-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+          beatae!
+        </h1></a
+      >
+      <a href="#" class="button is-medium is-primary is-rounded"
+        >Find out more</a
+      >
+    </div>
+
+    <div class="casestudy">
+      <div class="case-study-img">
+        <a href=""><Image src={caseStudy1} alt="Company logo" /></a>
+      </div>
+      <div class="tags-container">
+        <span
+          class="tag is-medium is-rounded is-primary is-light has-text-black"
+        >
+          Tag label</span
+        >
+        <span
+          class="tag is-medium is-rounded is-primary is-light has-text-black"
+        >
+          Tag label2</span
+        >
+      </div>
+      <a href=""
+        ><h1 class="title is-4">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus,
+          sequi repellat? Aliquid, a quis. Sapiente!
+        </h1></a
+      >
+      <a href="#" class="button is-medium is-primary is-rounded"
+        >Find out more</a
+      >
+    </div>
+
+    <div class="casestudy">
+      <div class="case-study-img">
+        <a href=""><Image src={caseStudy1} alt="Company logo" /></a>
+      </div>
+      <div class="tags-container">
+        <span
+          class="tag is-medium is-rounded is-primary is-light has-text-black"
+        >
+          Tag label</span
+        >
+      </div>
+      <a href=""
+        ><h1 class="title is-4">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus,
+          sequi repellat? Aliquid, a quis. Sapiente!
+        </h1></a
+      >
+      <a href="#" class="button is-medium is-primary is-rounded"
+        >Find out more</a
+      >
+    </div>
+  </div>
+</section>
+
+<style>
+  .case-studies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    grid-gap: 2rem;
+    padding: 2rem;
+  }
+
+  .case-study {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .case-study-img {
+    object-fit: cover;
+  }
+
+  .case-study-img img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+
+  .tags-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 0.5rem;
+  }
+
+  .case-studies-container h1 {
+    margin: 2rem 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    .case-studies-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+  }
+</style>

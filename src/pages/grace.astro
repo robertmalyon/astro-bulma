@@ -13,11 +13,17 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import TwoColTxtImg from '../components/TwoColTxtImg.astro';
 import Section from '../components/Section.astro';
+import FlexiStats from '../components/FlexiStats/FlexiStats.astro';
+import RoundedCards from '../components/RoundedCards.astro';
+import CaseStudies from '../components/CaseStudies.astro';
+import ComponentTemplate from '../components/ComponentTemplate.astro';
+import Services from '../components/Services.astro';
 ---
 
 <MainLayout>
   <BgImageHero />
   <Stats />
+  <FlexiStats />
   <Header />
   <PortfolioHeader />
   <PortfolioStackSection />
@@ -147,8 +153,15 @@ import Section from '../components/Section.astro';
       </div>
     </div>
   </section>
-  <Section>
-    <TwoColTxtImg firstItem="image" />
-  </Section>
+  <section class="section">
+    <div class="container">
+      <TwoColTxtImg firstItem="image" />
+    </div>
+  </section>
+  <RoundedCards />
+  <CaseStudies />
+  <ComponentTemplate />
+  <Services />
+
   <Footer />
 </MainLayout>

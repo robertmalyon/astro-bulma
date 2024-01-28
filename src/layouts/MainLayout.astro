@@ -5,7 +5,8 @@ import '../styles/reset.css';
 import { ViewTransitions } from 'astro:transitions';
 
 import Navbar from '../components/bulma/Navbar.astro';
-import Footer from '../components/bulma/Footer.astro';
+import Footer from '../components/Footer.astro';
+import MyNav from '../components/MyNav.astro';
 ---
 
 <!doctype html>
@@ -14,10 +15,13 @@ import Footer from '../components/bulma/Footer.astro';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c7ed4ee643.js"
+      crossorigin="anonymous"></script>
     <title>Document</title>
   </head>
   <body>
-    <Navbar />
+    <MyNav />
     <main>
       <ViewTransitions />
       <slot />

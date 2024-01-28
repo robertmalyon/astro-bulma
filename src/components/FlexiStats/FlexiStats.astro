@@ -1,0 +1,179 @@
+---
+import StatsItem from './StatsItem.astro';
+---
+
+<section>
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-large">
+        <div class="stats-component">
+          <div class="margin-bottom-xxlarge">
+            <div class="w-layout-grid stats-content">
+              <div class="stats-content-left">
+                <h2 class="heading-style-h3">
+                  Long heading is what you see here in this feature section
+                </h2>
+              </div>
+              <div class="stats-content-right">
+                <p class="text-size-medium">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique. Duis
+                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                  commodo diam libero vitae erat. Suspendisse varius enim in
+                  eros elementum tristique. Duis cursus, mi quis viverra ornare,
+                  eros dolor interdum nulla.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="stats-list">
+            <StatsItem statsNumber="50%" statsName="Effort" />
+            <StatsItem statsNumber="50%" statsName="Effort" />
+            <StatsItem statsNumber="50%" statsName="Effort" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .padding-global {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .container-large {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .padding-section-large {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .stats-component {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .margin-bottom-xxlarge {
+    margin-bottom: 5rem;
+  }
+
+  .w-layout-grid {
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+  }
+
+  .stats-list {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .margin-bottom-xxsmall {
+    margin-bottom: 0.5rem;
+  }
+
+  .heading-style-h6 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .stats-content {
+    grid-column-gap: 5rem;
+    grid-row-gap: 4rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    align-items: start;
+    display: grid;
+  }
+
+  .heading-style-h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .text-size-medium {
+    font-size: 1.125rem;
+  }
+
+  @media screen and (max-width: 991px) {
+    .padding-section-large {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    .margin-bottom-xxlarge {
+      margin-bottom: 4.5rem;
+    }
+
+    .stats-list {
+      grid-column-gap: 2rem;
+    }
+
+    .stats-content {
+      grid-column-gap: 3rem;
+      grid-row-gap: 2rem;
+    }
+
+    .heading-style-h3 {
+      font-size: 2.25rem;
+    }
+
+    .text-size-medium {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .padding-section-large {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .margin-bottom-xxlarge {
+      margin-bottom: 3rem;
+    }
+
+    .stats-list {
+      flex-direction: column;
+      width: auto;
+    }
+
+    .heading-style-h6 {
+      font-size: 1.125rem;
+    }
+
+    .stats-content {
+      grid-column-gap: 1.25rem;
+      grid-row-gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+
+    .heading-style-h3 {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .stats-content {
+      grid-row-gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
